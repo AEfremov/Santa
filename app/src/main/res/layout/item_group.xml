@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="60dp"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/ol_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bullet"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"/>
+    
+    <com.efremov.santa.core.widget.CustomFontTextView
+        android:id="@+id/group_name_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:lineSpacingExtra="3sp"
+        android:layout_centerVertical="true"
+        app:typeFaceAsset="fonts/FuturaPTMedium.otf"
+        android:layout_toEndOf="@id/ol_view"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+</RelativeLayout>

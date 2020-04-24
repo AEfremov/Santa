@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FFFFFF">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="16dp"
+        app:contentInsetStart="16dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    
+        <com.efremov.santa.core.widget.CustomFontTextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:text="@string/person_screen_title"
+            app:typeFaceAsset="fonts/FuturaPTMedium.otf"/>
+    </androidx.appcompat.widget.Toolbar>
+    
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/groups_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="always"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    
+    <ImageView
+        android:id="@+id/balls_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/balls"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:visibility="invisible"/>
+    
+    <com.efremov.santa.core.widget.CustomFontTextView
+        android:id="@+id/person_name_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:lineSpacingExtra="8sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/balls_view"
+        android:layout_marginTop="77dp"
+        app:typeFaceAsset="fonts/FuturaPTMedium.otf"
+        android:visibility="invisible"/>
+    
+    <com.efremov.santa.core.widget.CustomFontTextView
+        android:id="@+id/groups_search_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/person_screen_search_hint"
+        android:textSize="18sp"
+        android:textColor="#adaab5"
+        android:lineSpacingExtra="6sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/person_name_view"
+        android:layout_marginTop="13dp"
+        app:typeFaceAsset="fonts/FuturaPTBook.otf"
+        android:visibility="invisible"/>
+    
+    <com.efremov.santa.core.widget.CustomFontTextView
+        android:id="@+id/retry_load_data"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:text="Повторить"
+        android:textSize="20sp"
+        android:letterSpacing="0.015"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ButtonStyle"
+        app:typeFaceAsset="fonts/FuturaPTMedium.otf"
+        android:visibility="gone"/>
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/group_fab_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:visibility="gone"
+        app:fabSize="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_add_white_24dp"/>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

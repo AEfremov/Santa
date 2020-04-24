@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/colorPrimary">
+    
+    <ImageView
+        android:id="@+id/rudolph_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        android:contentDescription="TODO"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+    
+    <com.efremov.santa.core.widget.CustomFontTextView
+        android:id="@+id/secretSantaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/santa_screen_miracle_happened"
+        android:textSize="36sp"
+        android:textColor="#ffffff"
+        android:lineSpacingExtra="5sp"
+        android:layout_below="@id/rudolph_view"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        style="@style/FontSansSerif"
+        app:typeFaceAsset="fonts/FuturaPTHeavy.otf"/>
+    
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="20dp"
+        android:layout_height="2dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/line"
+        android:layout_marginTop="22dp"
+        android:layout_below="@id/secretSantaLabel"
+        android:layout_centerHorizontal="true"/>
+    
+    <com.efremov.santa.core.widget.CustomFontTextView
+        android:id="@+id/santa_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/santa_screen_santa_complete"
+        android:textSize="18sp"
+        android:lineSpacingExtra="7sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/line"
+        android:textColor="@android:color/white"
+        app:typeFaceAsset="fonts/FuturaPTBook.otf"/>
+    
+    <ImageView
+        android:id="@+id/done_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_done"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/santa_complete"
+        android:layout_marginTop="35dp"/>
+</RelativeLayout>

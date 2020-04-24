@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_FFFFFF">
+
+    <com.efremov.santa.core.widget.CustomFontTextView
+        android:id="@+id/dialog_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Группа"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:lineSpacingExtra="6sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        app:typeFaceAsset="fonts/FuturaPTMedium.otf"/>
+    
+    <LinearLayout
+        android:id="@+id/group_join"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_title"
+        android:layout_marginTop="22dp">
+        
+        <ImageView
+            android:id="@+id/connect_to_group_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_radio_off"
+            android:layout_marginStart="24dp"/>
+        
+        <com.efremov.santa.core.widget.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Присоединиться"
+            android:textSize="20sp"
+            android:textColor="#adaab5"
+            android:layout_marginStart="24dp"
+            app:typeFaceAsset="fonts/FuturaPTBook.otf"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/group_create"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/group_join"
+        app:layout_constraintBottom_toTopOf="@id/controls_layout">
+    
+        <ImageView
+            android:id="@+id/create_new_group_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_radio_off"
+            android:layout_marginStart="24dp"/>
+    
+        <com.efremov.santa.core.widget.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Создать"
+            android:textSize="20sp"
+            android:textColor="#adaab5"
+            android:layout_marginStart="24dp"
+            app:typeFaceAsset="fonts/FuturaPTBook.otf"/>
+    </LinearLayout>
+    
+    <EditText
+        android:id="@+id/group_name_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Придумайте название"
+        android:lines="1"
+        android:maxLines="1"
+        android:inputType="textCapSentences"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintTop_toBottomOf="@id/dialog_title"
+        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toTopOf="@id/controls_layout"/>
+    
+    <EditText
+        android:id="@+id/group_code_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите код"
+        android:lines="1"
+        android:maxLines="1"
+        android:inputType="textCapSentences"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintTop_toBottomOf="@id/dialog_title"
+        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toTopOf="@id/controls_layout"
+        android:layout_marginBottom="20dp"/>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/controls_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        
+        <Button
+            android:id="@+id/control_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_cancel"
+            android:textColor="@color/colorPrimary"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toStartOf="@id/control_ok"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"/>
+        
+        <Button
+            android:id="@+id/control_ok"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/action_ok"
+            android:textColor="@color/colorPrimary"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Secret Santa</string>
+    <string name="secret_santa_label">Secret Santa</string>
+    <string name="secret_santa_confidence_url">http://secret-santa.l-tech.ru/privacy_policy</string>
+    
+    <string name="action_ok">Ок</string>
+    <string name="action_cancel">Отмена</string>
+    <string name="empty"></string>
+    
+    <string name="secret_santa_label_ru">Вы поздравляете</string>
+    <string name="secret_santa_description">Узнай, кого ты осчастливишь\nв этом году</string>
+    <string name="action_save">Сохранить</string>
+    <string name="label_name">Имя</string>
+    <string name="label_surname">Фамилия</string>
+    
+    <string name="registration_screen_title">Регистрация</string>
+    <string name="reg_screen_name_not_empty">Имя и фамилия обязательны для звполнения!</string>
+    <string name="person_screen_title">С кем празднуете?</string>
+    <string name="person_screen_search_hint">Пока вы празднуете в одиночестве.\nНажмите на плюсик.</string>
+    
+    <string name="groups_screen_start_santa">Запустить Cанту</string>
+    <string name="groups_screen_new_group">Новая группа</string>
+    <string name="groups_screen_join_group">Присоединиться</string>
+    <string name="groups_screen_create_group">Создать</string>
+    <string name="groups_screen_empty_name">Название группы не может быть пустым!</string>
+    <string name="groups_screen_empty_code">Код не может быть пустым!</string>
+    <string name="groups_screen_welcome">Добро пожаловать!</string>
+    
+    <string name="santa_screen_miracle_happened">Чудо\nпроизошло</string>
+    <string name="santa_screen_santa_complete">Состоялся розыгрыш\nТайного Санты</string>
+    <string name="santa_screen_show_result">Смотреть результаты</string>
+</resources>
